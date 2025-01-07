@@ -33,6 +33,7 @@ Below is the BibTex for citing this snapshot of the repository.
 ## Description
 
 This software aims to compare IGA and KTNS algorithms for the Tool Replacement Problem.
+The experiments were conducted on a server running a 64-bit Windows 10 operating system, equipped with Intel(R) Core i5 CPU 2.6 GHz and 4 GB of RAM.
 To compare KTNS and IGA algorithms for each of the 10 problem instances of data sets
 from [Catanzaro et al.](https://doi.org/10.1016/j.ejor.2015.02.018) we generate 10<sup>5</sup> job sequences. Additionally, for each of the 5
 problem instances of data sets from [Mecler et al.](https://doi.org/10.1016/j.cor.2020.105153) we generate 2·10<sup>5</sup> job sequences.
