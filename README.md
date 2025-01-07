@@ -20,7 +20,7 @@ https://doi.org/10.1287/ijoc.2023.0474.cd
 Below is the BibTex for citing this snapshot of the repository.
 
 ```
-@misc{A Computational Study of the Tool Replacement Problem,
+@misc{ToolReplacementProblem,
   author =        {Yuzhuo Qiu, Mikhail Cherniavskii, Boris Goldengorin, Panos M. Pardalos},
   publisher =     {INFORMS Journal on Computing},
   title =         {A Computational Study of the Tool Replacement Problem},
