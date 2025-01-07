@@ -37,6 +37,10 @@ The experiments were conducted on a server running a 64-bit Windows 10 operating
 To compare KTNS and IGA algorithms for each of the 10 problem instances of data sets
 from [Catanzaro et al.](https://doi.org/10.1016/j.ejor.2015.02.018) we generate 10<sup>5</sup> job sequences. Additionally, for each of the 5
 problem instances of data sets from [Mecler et al.](https://doi.org/10.1016/j.cor.2020.105153) we generate 2·10<sup>5</sup> job sequences.
+
+src/main.cpp contains the algorithms and experiments implemented in C++.
+scripts/tests.py еxecutes src/main.cpp and plots a graph to present the performance or outcome of the experiments.
+
 ## Results
 
 Figure 8 in the paper shows the results of the Comparison of KTNS and IGA algorithms for [Catanzaro et al.](https://doi.org/10.1016/j.ejor.2015.02.018) and [Mecler et al.](https://doi.org/10.1016/j.cor.2020.105153) datasets.
