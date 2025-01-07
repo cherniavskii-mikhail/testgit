@@ -467,7 +467,7 @@ struct Experiments
         }
 
         // execute the algorithm for each job sequence
-        std::cout << "alg=" << alg_for_test_name << ", n=" << n << ", m=" << m << ", C=" << C << ", file=" << TRP_instance_path << ".\n";
+        std::cout << "alg=" << alg_for_test_name << ", n=" << n << ", m=" << m << ", C=" << C << ", file=" << TRP_instance_path << "." << std::endl;
         clock_t start = clock();
         for (int i = 0; i < NUMBER_OF_JOB_SEQUENCES; i++)
         {
@@ -563,7 +563,7 @@ struct Experiments
             output_file.open(OUTPUT_FILE, std::ios::app);
             output_file << "{\"algorithm\": \"" 
                         << alg_for_test_name 
-                        << "\", \"" << dataset_name << "\": " << summary_time << "}\n";
+                        << "\", \"" << dataset_name << "\": " << summary_time << "}" << std::endl;
             output_file.close();
         }
     }
@@ -577,12 +577,11 @@ int main()
     output_file.open(OUTPUT_FILE, std::ofstream::out | std::ofstream::trunc);
     output_file.close();
 
+    Experiments test_IGAfull(IGAfull, "IGA-full");
+    test_IGAfull.run_tests();
 
-    Experiments test_IGAfullbitwise(IGAfull, "IGA-full");
-    test_IGAfullbitwise.run_tests();
-
-    Experiments test_IGA_bit_bitwise(IGA_bit, "IGA-bit");
-    test_IGA_bit_bitwise.run_tests();
+    Experiments test_IGA_bit(IGA_bit, "IGA-bit");
+    test_IGA_bit.run_tests();
 
     Experiments test_IGA(IGA, "IGA");
     test_IGA.run_tests();
