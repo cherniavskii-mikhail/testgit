@@ -36,10 +36,9 @@ The goal of this software is compare to IGA and KTNS algorithms for the Tool Rep
 
 ## Results
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+Figure 8 in the paper shows the results of the Comparison of KTNS and IGA algorithms for Catanzaro and Mecler datasets.
 
-![Figure 1](results/results.png)
+![Figure 8](results/results.png)
 
 ## Replicating
 
