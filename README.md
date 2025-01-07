@@ -38,7 +38,7 @@ This software aims to compare IGA and KTNS algorithms for the Tool Replacement P
 
 Figure 8 in the paper shows the results of the Comparison of KTNS and IGA algorithms for [Catanzaro](https://doi.org/10.1016/j.ejor.2015.02.018) and [Mecler](https://doi.org/10.1016/j.cor.2020.105153) datasets.
 
-![Figure 8](results/results.png)
+![Figure 1](results/results.png)
 
 ## Replicating
 
