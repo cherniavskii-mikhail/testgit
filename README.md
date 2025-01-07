@@ -33,10 +33,12 @@ Below is the BibTex for citing this snapshot of the repository.
 ## Description
 
 This software aims to compare IGA and KTNS algorithms for the Tool Replacement Problem.
-
+To compare KTNS and IGA algorithms for each of the 10 problem instances of data sets
+from [Catanzaro et al.](https://doi.org/10.1016/j.ejor.2015.02.018) we generate 10^5 job sequences. Additionally, for each of the 5
+problem instances of data sets from [Mecler et al.](https://doi.org/10.1016/j.cor.2020.105153) we generate 2 ·10^5 job sequences.
 ## Results
 
-Figure 8 in the paper shows the results of the Comparison of KTNS and IGA algorithms for [Catanzaro](https://doi.org/10.1016/j.ejor.2015.02.018) and [Mecler](https://doi.org/10.1016/j.cor.2020.105153) datasets.
+Figure 8 in the paper shows the results of the Comparison of KTNS and IGA algorithms for [Catanzaro et al.](https://doi.org/10.1016/j.ejor.2015.02.018) and [Mecler et al.](https://doi.org/10.1016/j.cor.2020.105153) datasets.
 
 ![Figure 1](results/results.png)
 
