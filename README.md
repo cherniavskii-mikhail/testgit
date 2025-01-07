@@ -20,7 +20,7 @@ https://doi.org/10.1287/ijoc.2023.0474.cd
 Below is the BibTex for citing this snapshot of the repository.
 
 ```
-@misc{CacheTest,
+@misc{A Computational Study of the Tool Replacement Problem,
   author =        {Yuzhuo Qiu, Mikhail Cherniavskii, Boris Goldengorin, Panos M. Pardalos},
   publisher =     {INFORMS Journal on Computing},
   title =         {A Computational Study of the Tool Replacement Problem},
@@ -32,11 +32,11 @@ Below is the BibTex for citing this snapshot of the repository.
 
 ## Description
 
-The goal of this software is compare to IGA and KTNS algorithms for the Tool Replacement Problem.
+This software aims to compare IGA and KTNS algorithms for the Tool Replacement Problem.
 
 ## Results
 
-Figure 8 in the paper shows the results of the Comparison of KTNS and IGA algorithms for Catanzaro and Mecler datasets.
+Figure 8 in the paper shows the results of the Comparison of KTNS and IGA algorithms for [Catanzaro](https://doi.org/10.1016/j.ejor.2015.02.018) and [Mecler](https://doi.org/10.1016/j.cor.2020.105153) datasets.
 
 ![Figure 8](results/results.png)
 
