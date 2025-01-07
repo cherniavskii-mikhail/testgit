@@ -34,57 +34,17 @@ Below is the BibTex for citing this snapshot of the repository.
 
 The goal of this software is compare to IGA and KTNS algorithms for the Tool Replacement Problem.
 
-## Building
-
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
-
-```
-make mult
-```
-
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
-
-```
-make clean
-make sum
-```
-
-Be sure to make clean before building a different version of the code.
-
 ## Results
 
 Figure 1 in the paper shows the results of the multiplication test with different
 values of K using `gcc` 7.5 on an Ubuntu Linux box.
 
-![Figure 1](results/mult-test.png)
-
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/sum-test.png)
+![Figure 1](results/results.png)
 
 ## Replicating
 
-To replicate the results in [Figure 1](results/mult-test), do either
+In Linux, to replicate the results do
 
 ```
-make mult-test
+make all
 ```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-
