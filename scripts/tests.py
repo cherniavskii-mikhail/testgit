@@ -4,13 +4,13 @@ import os, sys
 import subprocess
 import json
 
-# proc = subprocess.Popen([os.path.join(os.getcwd(), "main")], stdout=subprocess.PIPE)
+proc = subprocess.Popen([os.path.join(os.getcwd(), "main")], stdout=subprocess.PIPE)
 
-# while True:
-#   line = proc.stdout.readline()
-#   print(line)
-#   if not line:
-#     break
+while True:
+  line = proc.stdout.readline()
+  print(line)
+  if not line:
+    break
 
 
 with open(".//results/results.txt", "r") as f:
@@ -25,25 +25,24 @@ for line in results_txt.split("\n"):
     alg2results[alg] =  alg2results.get(alg, []) + [(dataset_name, data[dataset_name])]
 
 colors = {
-    "KTNS": "blue", 
-    "IGA-bit": "orange", 
-    "IGA": "green", 
-    "IGA-full": "red"
+    "KTNS": "#1f77b4",
+    "IGA-bit": "#ff7f0e",
+    "IGA": "#2ca02c",
+    "IGA-full": "#d62728"
 }
-
 
 for k in colors.keys():
     labels = list(map(lambda x : x[0], sorted(alg2results[k])))
     alg2results[k] = list(map(lambda x : x[1], sorted(alg2results[k])))
 n = len(labels)
 
-plt.rcParams["figure.figsize"] = (10,5)
+plt.rcParams["figure.figsize"] = (13,5)
 fig, ax = plt.subplots()
 plt.gca().set_xticks(range(n))
 ax.set_xticklabels(labels)
 
 for alg_name, results in alg2results.items():
-    ax.plot(list(range(n)), results, label=alg_name, color=colors[alg_name], linewidth=1.5)
+    ax.plot(list(range(n)), results, label=alg_name, color=colors[alg_name], linewidth=1.8)
 
 plt.legend(loc='upper left')
 plt.grid(True)
