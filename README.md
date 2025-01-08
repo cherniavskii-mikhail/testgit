@@ -1,3 +1,5 @@
+[![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
+
 # A Computational Study of the Tool Replacement Problem
 
 This archive is distributed in association with the [INFORMS Journal on
@@ -5,7 +7,7 @@ Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2023.0474) by Yuzhuo Qiu, Mikhail Cherniavskii, Boris Goldengorin, Panos M. Pardalos.  
+[A Computational Study of the Tool Replacement Problem](https://doi.org/10.1287/ijoc.2023.0474) by Yuzhuo Qiu, Mikhail Cherniavskii, Boris Goldengorin, Panos M. Pardalos.  
 
 ## Cite
 
@@ -18,7 +20,7 @@ https://doi.org/10.1287/ijoc.2023.0474.cd
 Below is the BibTex for citing this snapshot of the repository.
 
 ```
-@misc{CacheTest,
+@misc{ToolReplacementProblem,
   author =        {Yuzhuo Qiu, Mikhail Cherniavskii, Boris Goldengorin, Panos M. Pardalos},
   publisher =     {INFORMS Journal on Computing},
   title =         {A Computational Study of the Tool Replacement Problem},
@@ -30,59 +32,25 @@ Below is the BibTex for citing this snapshot of the repository.
 
 ## Description
 
-The goal of this software is compare to IGA and KTNS algorithms for the Tool Replacement Problem.
+This software aims to compare IGA and KTNS algorithms for the Tool Replacement Problem.
+The experiments were conducted on a server running a 64-bit Windows 10 operating system, equipped with Intel(R) Core i5 CPU 2.6 GHz and 4 GB of RAM.
+To compare KTNS and IGA algorithms for each of the 10 problem instances of data sets
+from [Catanzaro et al.](https://doi.org/10.1016/j.ejor.2015.02.018) we generate 10<sup>5</sup> job sequences. Additionally, for each of the 5
+problem instances of data sets from [Mecler et al.](https://doi.org/10.1016/j.cor.2020.105153) we generate 2·10<sup>5</sup> job sequences.
 
-## Building
-
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
-
-```
-make mult
-```
-
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
-
-```
-make clean
-make sum
-```
-
-Be sure to make clean before building a different version of the code.
+* src/main.cpp contains the algorithms and experiments implemented in C++.
+* scripts/tests.py еxecutes src/main.cpp and plots a graph to present the performance or outcome of the experiments.
 
 ## Results
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+Figure 8 in the paper shows the results of the Comparison of KTNS and IGA algorithms for [Catanzaro et al.](https://doi.org/10.1016/j.ejor.2015.02.018) and [Mecler et al.](https://doi.org/10.1016/j.cor.2020.105153) datasets.
 
-![Figure 1](results/mult-test.png)
-
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/sum-test.png)
+![Figure 1](results/results.png)
 
 ## Replicating
 
-To replicate the results in [Figure 1](results/mult-test), do either
+In Linux, to replicate the results do
 
 ```
-make mult-test
+make all
 ```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-

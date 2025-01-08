@@ -4,13 +4,13 @@ import os, sys
 import subprocess
 import json
 
-# proc = subprocess.Popen([os.path.join(os.getcwd(), "main")], stdout=subprocess.PIPE)
+proc = subprocess.Popen([os.path.join(os.getcwd(), "main")], stdout=subprocess.PIPE)
 
-# while True:
-#   line = proc.stdout.readline()
-#   print(line)
-#   if not line:
-#     break
+while True:
+  line = proc.stdout.readline()
+  print(line)
+  if not line:
+    break
 
 
 with open(".//results/results.txt", "r") as f:
@@ -49,5 +49,5 @@ plt.legend(loc='upper left')
 plt.grid(True)
 plt.xlabel("dataset name")
 plt.ylabel("time, sec")
-fig.savefig('results.png', format='png', dpi=300)
+#fig.savefig('results.png', format='png', dpi=300)
 plt.show()
