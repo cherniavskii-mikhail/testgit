@@ -4,13 +4,13 @@ import os, sys
 import subprocess
 import json
 
-proc = subprocess.Popen([os.path.join(os.getcwd(), "main")], stdout=subprocess.PIPE)
+# proc = subprocess.Popen([os.path.join(os.getcwd(), "main")], stdout=subprocess.PIPE)
 
-while True:
-  line = proc.stdout.readline()
-  print(line)
-  if not line:
-    break
+# while True:
+#   line = proc.stdout.readline()
+#   print(line)
+#   if not line:
+#     break
 
 
 with open(".//results/results.txt", "r") as f:
@@ -43,7 +43,7 @@ plt.gca().set_xticks(range(n))
 ax.set_xticklabels(labels)
 
 for alg_name, results in alg2results.items():
-    ax.plot(list(range(n)), results, label=alg_name, color=colors[alg_name])
+    ax.plot(list(range(n)), results, label=alg_name, color=colors[alg_name], linewidth=1.5)
 
 plt.legend(loc='upper left')
 plt.grid(True)
